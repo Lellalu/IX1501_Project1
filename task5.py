@@ -1,7 +1,4 @@
 import numpy as np
-from numpy import random
-import matplotlib.pyplot as plt
-import pandas as pd
 import scipy
 
 def calc_prob_list(n):
@@ -13,7 +10,7 @@ def calc_prob_list(n):
 
 real_prob = 0.010677083333333334
 
-for i in range(11000, 20000):
+for i in range(11600, 20000):
   prob_list = calc_prob_list(i)
   most_probable_prob = np.argmax(prob_list)/i
   err_value = abs(most_probable_prob-real_prob)/real_prob
