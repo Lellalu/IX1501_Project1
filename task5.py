@@ -1,7 +1,8 @@
 import numpy as np
 import scipy
 
-# Calculate the win probability of n trails by binomial distribution
+# Calculate the probabilities of win 0 to n times
+# in a trail set by binomial distribution
 def calc_prob_list(n):
   real_prob = 0.010677083333333334 # The exact value we got in task 2
   prob_list = []
@@ -10,7 +11,7 @@ def calc_prob_list(n):
   return prob_list
 
 real_prob = 0.010677083333333334
-# Search for minimum trails within relative value from (10000 to 20000)
+# Search for minimum trails within relative value from 10000 to 20000
 for i in range(11600, 20000):
   # Get the probability list of i trails
   prob_list = calc_prob_list(i)
